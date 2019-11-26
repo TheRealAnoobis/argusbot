@@ -1,0 +1,7 @@
+node_modules
+real_settings
+settings.json
+commands/spam.js
+data
+.vscode
+.npmignore

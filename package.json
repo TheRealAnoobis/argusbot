@@ -1,0 +1,27 @@
+{
+  "name": "argusbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Discord_bot_Argus.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "dateformat": "^3.0.3",
+    "discord.js": "^11.5.1",
+    "lowdb": "^1.0.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimitar-Pilyakov/argusbot.git"
+  },
+  "author": "anoobis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dimitar-Pilyakov/argusbot/issues"
+  },
+  "homepage": "https://github.com/Dimitar-Pilyakov/argusbot#readme"
+}

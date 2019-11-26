@@ -1,0 +1,95 @@
+{
+    "Page1": {
+        "Help": {
+            "name": "Help",
+            "group": "User",
+            "description": "Display a list of commands. By default the command result is sent to Direct Messages. Using the 'server' key word will make them send in the server instead. Gives more examples when used for specific command/group.",
+            "syntax": "help [page number] [server] [group OR command]",
+            "examples": [
+                "help ┝ Displays the first help page by default.",
+                "help 2 ┝ Displays the second help page.",
+                "help user ┝ Sends a Direct Message with the commands in the User group.",
+                "help uber ┝ Sends a Direct Message with the commands in the Uber command.",
+                "help server ┝ The help message is posted on the server.",
+                "help user server ┝ The result for the user 'group' is posted on the server."
+            ]
+        },
+
+        "State": {
+            "name": "State",
+            "group": "Admin",
+            "description": "Toggle automatic Uber Lab layout posting. Display current state.",
+            "syntax": "state <on/off>",
+            "examples": [
+                "state on ┝ Toggles posting state on, the bot will post the labyrinth at a certain time (typically after it's updated on poelab.com) every day.",
+                "state off ┝ Toggles the posting state off.",
+                "state ┝ Displays the current posting state for the server and channel."
+            ]
+        },
+
+        "Prefix": {
+            "name": "Prefix",
+            "group": "Admin",
+            "description": "Sets the prefix for the current server",
+            "syntax": "prefix <symbol> (length no more than 2) or <default> to reset to default. All of the use cases word with the default bot prefix( ~ ) and not just the server prefix.",
+            "examples": [
+                "prefix ┝ Returns the current server prefix.",
+                "prefix default ┝ Resets the server prefix to the default bot prefix.",
+                "prefix ! ┝ Changes the currnet server prefix to '!'."
+            ]
+        },
+
+        "Uber": {
+            "name": "Uber",
+            "group": "User",
+            "description": "Display today's Uber Lab.",
+            "syntax": "uber",
+            "examples": [
+                "uber ┝ Posts an embed with the Uber/Eternal lab layout"
+            ]
+        }
+
+    },
+    "Page2": {
+
+        "Eternal": {
+            "name": "Eternal",
+            "group": "User",
+            "description": "Display today's Uber Lab.",
+            "syntax": "eternal",
+            "examples": [
+                "eternal ┝ Posts an embed with the Uber/Eternal lab layout"
+            ]
+        },
+
+        "Merciless": {
+            "name": "Merciless",
+            "group": "User",
+            "description": "Display today's Merciless Lab.",
+            "syntax": "merciless",
+            "examples": [
+                "merciless ┝ Posts an embed with the Merciless lab layout."
+            ]
+        },
+
+        "Cruel": {
+            "name": "Cruel",
+            "group": "User",
+            "description": "Display today's Cruel Lab.",
+            "syntax": "cruel",
+            "examples": [
+                "cruel ┝ Posts an embed with the Cruel lab layout."
+            ]
+        },
+
+        "Normal": {
+            "name": "Normal",
+            "group": "User",
+            "description": "Display today's Normal Lab.",
+            "syntax": "normal",
+            "examples": [
+                "normal ┝ Posts an embed with the Normal lab layout."
+            ]
+        }
+    }
+}

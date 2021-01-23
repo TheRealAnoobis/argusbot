@@ -39,12 +39,11 @@ bot.on('message', message => {
 
   //**Message processing**
   //Checks to make sure the message starts with a prefix, it is not the bot sending the message and the message is not being read in Direct Messages.
-  if ((!message.content.startsWith(prefix) || message.author.bot) && (!message.content.startsWith(`${default_prefix}prefix`) && !message.content.startsWith(`${default_prefix}help`))) {
+  if ((!message.content.startsWith(prefix) || message.author.bot) &&
+        (!message.content.startsWith(`${default_prefix}prefix`) &&
+            !message.content.startsWith(`${default_prefix}help`))) {
     return;
   }
-
-  //The message is converted to upper case, to ensure that there are no case sensitivity issues.
-  let msg = message.content.toUpperCase();
   //The message is split up into arguments at every space, the prefix is removed.
   let args = message.content.slice(prefix.length).trim().split(' ');
   //Determines if a default prefix command is used and how to split the arguments based on that.
@@ -119,9 +118,9 @@ bot.on('message', message => {
 
 function loop() {
   //Iterates over a map of the guilds and stores the key(guild id) in guildId, and a map of the other server properties in guild.
-  for ([guildId, guild] of bot.guilds) {
+  for ([guildId, guild] of bot.guilds.cache) {
     //Iterates over the channels attribute of the guilds and stores the key(channel id) in channelId, and a map of the channel properties in channel.
-    for ([channelId, channel] of guild.channels) {
+    for ([channelId, channel] of guild.channels.cache) {
       //uber.js file to run the cmd.
       const uber = require('./commands/uber.js');
       //Creates a new date for comparison every time the loop plays.

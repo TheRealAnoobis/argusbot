@@ -12,7 +12,7 @@ exports.run = (bot, msg, args, db, roles, channelID) => {
 
   //Retrieves the embed from our parser class and sends it to the appropriate channel.
   parser.getEmbed("uber", function (uberEmbed) {
-    bot.channel.send(uberEmbed)
+    msg.channel.send(uberEmbed)
       .catch(error => console.log(error));
   });
 }

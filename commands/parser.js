@@ -13,7 +13,7 @@ function getEmbed(labType, cb) {
     //Variable to store the response.
     let actualResponse = "";
     //Rich embed, cuz we fancy.
-    let embed = new Discord.RichEmbed().setColor(0x19B366);
+    let embed = new Discord.MessageEmbed().setColor(0x19B366);
     //Sets the lab type to determine which HTML item to scrape.
     switch (labType) {
         case "normal":
@@ -55,7 +55,7 @@ function getEmbed(labType, cb) {
                     //Loads the HTML into the cheerio package.
                     var $ = cheerio.load(html);
                     //Stores the layout image URL in a variable.
-                    let layout = $('.entry-content', '.clearfix').children('p').children('span').children('img').attr('src').toString().trim();
+                    let layout = $('.entry-content', '.clearfix').children('div[id="regular-container"]').children('img').attr('src').toString().trim();
 
                     //Adds the two image files by URL to the end of an array.
                     files.push(layout);

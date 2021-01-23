@@ -16,7 +16,7 @@ exports.run = (bot, msg, args, db) => {
   }
 
   //The help embed, setColor sets the border color.
-  var helpEmbed = new Discord.RichEmbed().setColor(0x19B366);
+  var helpEmbed = new Discord.MessageEmbed().setColor(0x19B366);
   helpEmbed.setTitle("**COMMAND HELP**");
 
   //Sends incorrect usage message if the command length is more than three arguments or has more than 1 page number.
@@ -60,7 +60,7 @@ exports.run = (bot, msg, args, db) => {
         embedSender(prefix, args, msg, helpEmbed);
 
         //Creates a new embed in order to print multiple pages from the command JSON.
-        helpEmbed = new Discord.RichEmbed().setColor(0x19B366);
+        helpEmbed = new Discord.MessageEmbed().setColor(0x19B366);
         helpEmbed.setTitle("**COMMAND HELP**");
         return;
 
@@ -91,7 +91,7 @@ function embedBuilder(prefix, args, commands, page, cmd, helpEmbed) {
     for (var i = 0; i < commands[page][cmd].examples.length; i++) {
       helpEmbed.addField(`*Example*:`, `${prefix + commands[page][cmd].examples[i]}`);
     }
-    helpEmbed.addBlankField();
+    helpEmbed.addField('\u200b', '\u200b');
     helpEmbed.setFooter(`Currently showing ${commands[page][cmd].group} group. To view another group or command use ${prefix}help [group / command]`);
 
     //If it doesn't match any names/groups, it checks what the first command word is.
@@ -108,7 +108,7 @@ function embedSender(prefix, args, msg, helpEmbed) {
   //Creates the embed body based on the searched query
 
   //Field for the command usage key.
-  helpEmbed.addBlankField();
+  helpEmbed.addField('\u200b', '\u200b');
   helpEmbed.addField(`Server prefix for ${msg.guild.name}: \`${prefix}\``, `\`<> - required, [] - optional\`\n Use \`${prefix}help [number]\` to display other help pages.`);
   helpEmbed.setFooter(`Currently showing all commands. To view any group/command use ${prefix}help [group / command]`);
 
